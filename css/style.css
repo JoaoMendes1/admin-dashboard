@@ -41,3 +41,57 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #007bff
 }
+
+/* Estilizando Menu lateral */
+
+/* Estilo para o elemento main que contém a barra lateral e o conteúdo principal  */
+
+main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Estilo para a barra lateral */
+aside {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 250px;/* Largura fix para a barra lateral */
+}
+
+aside h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside nav ul li a {
+  display: block; /* Faz o link ocupar toda a largura, tornando-o mais fácil de clicar */
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px; 
+}
+
+aside nav ul li a:hover {
+  background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+  color: #007bff;
+}
+
+/* Eestilo para a área principal do painel */
+
+.dashboard-content {
+  flex-grow: 1; /* Faz a área do conteúdo ocupar o espaço restante */ 
+}
+
