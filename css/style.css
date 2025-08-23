@@ -95,3 +95,37 @@ aside nav ul li a:hover {
   flex-grow: 1; /* Faz a área do conteúdo ocupar o espaço restante */ 
 }
 
+/*===================Área Principal e os Cartões =========================*/
+
+.dashboard-content {
+  flex-grow: 1; /*Permite que essa seção ocupe todo o espaço disponível*/
+}
+
+/* Container para os cartões de dados */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Estilo de cada cartão indivídual */
+.card {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  margin-top: 0;
+  padding: 1.1rem;
+  color: #007BFF;
+}
+
+.card p {
+  font-size: 1,5rem;
+  font-weight: 600;
+  color: #333;
+}
