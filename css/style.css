@@ -226,4 +226,33 @@ main .date input[type="date"] {
     color: var(--color-dark);
 }
 
+/* Layout em grade para os 3 cards de Vendas, Despesas e Receita */
+main .insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*Cria 3 colunas de tamanho igual*/
+  gap: 1.6rem; 
+}
+
+/* Estilo base de cada card de insight */
+main .insights > article {
+   background: var(--color-white);
+   padding: var(--card-padding);
+   border-radius: var(--card-border-radius);
+   margin-top: 1rem;
+   box-shadow: var(--box-shadow);
+   transition: all 300ms ease;
+}
+
+main .insights > article:hover {
+  box-shadow: none; /*Remove a sombra ao passar o mouse*/
+}
+
+main .insights >article span {
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 2rem;
+}
+
 
