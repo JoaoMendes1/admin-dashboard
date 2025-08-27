@@ -233,7 +233,7 @@ main .insights {
   gap: 1.6rem; 
 }
 
-/* Estilo base de cada card de insight */
+/* Estilo base de cada card */
 main .insights > article {
    background: var(--color-white);
    padding: var(--card-padding);
@@ -254,5 +254,81 @@ main .insights >article span {
   color: var(--color-white);
   font-size: 2rem;
 }
+
+/* Cores específicas dos ícones dos outros cards */
+
+main .insights > article.expanses span {
+  background: var(--color-danger);
+
+}
+
+main .insights > article.income span {
+  background: var(--color-success);
+}
+
+main .insights > article .middle { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .insights h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+}
+
+/*Estilização do círculo de progresso com SVG*/
+main .insights .progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+main .insights svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+main .insights svg circle {
+  fill: none; /* O círculo não tem preenchimento */ 
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+/* O truque para criar o efeito de preenchimento do córculo */
+main .insights .sales svg circle {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+}
+
+main .insights .expenses svg circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 80;
+}
+
+main .insights .income svg circle {
+  stroke-dashoffset: 35;
+  stroke-dasharray: 110;
+}
+
+/* Posiciona o número da porcentagem no centro so círculo */
+main .insights .progress .number {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .insights small {
+  margin-top: 1.3rem;
+  display: block;
+}
+
 
 
