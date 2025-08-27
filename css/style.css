@@ -199,4 +199,18 @@ aside .sidebar .message-count {
   border-radius: var(--border-radius-1);
 }
 
+/* =================== MAIN (CONTEÚDO PRINCIPAL) =================== */
+
+main {
+  margin-top: 1.4rem;
+}
+
+main .date {
+  display: inline-block;
+  background: var(--color-light);
+  border-radius: var(--border-radius-1);
+  margin-top: 1.4rem;
+  padding: 0.5rem 1.6rem;
+}
+
 
