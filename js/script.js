@@ -4,19 +4,32 @@
   const tr = document.createElement('tr'); 
 
   //Cria o conteúdo HTML para a nova linha, usando os dados do pedido atual 
-  const trContent = `
-    <td>${order.productName}</td>
-    <td>${order.productNumber}</td>
-    <td>${order.paymentStatus}</td>
-  <td class="${order.shippping === 'Declined' ? 'danger' : order.shippping === 'Pending' ? 'warning' : 'primary'}">${order.shipping}</td>
-  <td class="primary">Detaiils</td>
-  `;
+const trContent =`
+  <td>${order.productName}</td>
+  <td>${order.productNumber}</td>
+  <td>${order.paymentStatus}</td>
+  <td class="${order.shipping.trim() === 'Declined' ? 'danger' : order.shipping.trim() === 'Pending' ? 'warning' : 'primary'}">${order.shipping}</td>
+  <td class="primary">Details</td>
+`;
 
   // Insere o conteúdo HTML na linha que criamos 
   tr.innerHTML = trContent;
 
   // Adiciona a nova linha preenchida ao corpo da tabela (tbody) no nosso HTML
   document.querySelector('table tbody').appendChild(tr);
+ });
+
+ // Seleciona o botão de tema no documento 
+ const themeToggler = document.querySelector('.theme-toggler');
+
+ //Adiciona um "escutador" de eventos de clique ao botão
+ themeToggler.addEventListener('click', () => {
+  //Adiciona ou remove a classe do tema escuro body
+  document.body.classList.toggle('dark-theme-variables');
+
+  //Altera a classe 'active nos ícones de sol e lua 
+  themeToggler.querySelector('span:nth-child(1)').classList.toggle('active'); 
+  themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
  });
 
 

@@ -28,6 +28,16 @@
 
 }
 
+/* =================== CONFIGURAÇÕES DO TEMA ESCURO =================== */
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
 /* =================== ESTILOS GERAIS E RESET =================== */
 
 * {
@@ -356,16 +366,17 @@ main .recent-orders table:hover {
 }
 
 main table tbody td {
-  height: 2.8rem;
-  border-bottom: 1px solid var(--color-light);
-  color: var(--color-dark-variant);
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light); /* Manter esta linha */
+    /* Adicione a linha abaixo: */
+    border-color: var(--color-dark-variant); /* Para o dark mode, a borda será da cor do texto secundário */
 }
 
 /* Remove a borda da última linha para um visual mais limpo */
 main table tbody tr:last-child td {
   border: none;
 }
-44
+
 main .recent-orders a {
   text-align: center;
   display: block;
