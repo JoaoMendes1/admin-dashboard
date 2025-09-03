@@ -550,3 +550,102 @@ table tbody td.warning {
 table tbody td.primary {
     color: var(--color-primary);
 }
+
+/* =================== MEDIA QUERIES (TABLETS) =================== */
+/* Estas regras se aplicam para telas com largura máxima de 1200px */
+@media screen and (maxwidth: 1200px) {
+  .container {
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem; /* diminui a coluna do menu lateral  */
+  }
+
+  aside .logo h2 {
+    display: none; /* Esconde o nome "" no logo */
+  }
+
+  aside .sidebar h3 {
+    display: none; /*Esconde o texto dos links (ex: "Dashboard") */
+  }
+
+  aside .sidebar a {
+    width: 5.6rem; /* Ajusta a largura do link para caber só o ícone */
+  }
+
+  aside .sidebar a:last-child {
+    position: relative; 
+    margin-top: 1.8rem;
+  }
+}
+
+/* =================== MEDIA QUERIES (CELULARES) =================== */
+/* Estas regras se aplicam para telas com largura máxima de 768px */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr; /* O layout de 3 colunas vira uma única coluna */
+  }
+
+  aside {
+    position: fixed; /*Fixa o menu para ele poder deslizar por cima do conteúdo */
+    left: -100%; /* Começa escondido totalmente para a esquerda, fora da tela */
+    background: var(--color-white);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none; /*Começa desligado para o JS poder ligá-lo*/
+    animation: showMenu 400ms ease forwards; /*Animação para deslizar*/
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0; /* O estado final da animação é o menu na posição 0 (Visível) */
+    }
+  }
+
+  aside .logo h2,
+  aside .sidebar h3 {
+    display: inline; /* Mostra os textos novamente quando o menu está aberto no celular */
+  } 
+
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  aside .close {
+    display: inline-block;  /* Mostra o botão 'X' de fechar */
+  }
+
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+  .right .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    background: var(--color-white);
+    width: 100%;
+    margin: 0;
+    z-index: 2; /* Garante que a barra superior fique acima do conteúdo principal */
+    box-shadow: 0 1rem 1rem var(--color-light);
+  }
+
+   /* O botão de menu (hambúrguer) finalmente aparece */
+   .right .top button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dark);
+    position: absolute;
+    left: 1rem;
+   }
+
+}
