@@ -365,7 +365,7 @@ main table tbody td {
 main table tbody tr:last-child td {
   border: none;
 }
-
+44
 main .recent-orders a {
   text-align: center;
   display: block;
@@ -524,4 +524,18 @@ main .recent-orders a {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+/* Adicione este bloco no final do seu CSS para corrigir as cores do status */
+table tbody td.danger {
+    color: var(--color-danger);
+}
+
+table tbody td.warning {
+    color: var(--color-warning);
+}
+
+/* A classe .primary já está sendo usada para o "Details", mas vamos garantir a cor para "Delivered" também */
+table tbody td.primary {
+    color: var(--color-primary);
 }
